@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="insertionSort.js"></script>
+    <script src="mergeSort.js"></script>
+    <script src="quickSort.js"></script>
+</head>
+<body>
+<div>
+<!-- Insertion Sort div -->
+<div>
+<h1 style="text-align: center;">Click to sort using insertion sort</h1>
+<div style="margin-left: 40px;">
+<button onclick="insertionSort()">Calculate</button>
+<!--displaying the result for insertion.js file-- -->
+<p id="demo_u1"></p>
+<p id="demo_i2"></p>
+<p id="demo_i3"></p>
+</div>
+</div>
+
+<!-- Merge Sort div -->
+<div>
+    <h1 style="text-align: center;">Click to sort using merge sort</h1>
+    <div style="margin-left: 40px;">
+        <button onclick="divide()">Calculate</button>
+        <!--displaying the result for insertion.js file-- -->
+        <p id="demo_u2"></p>
+        <p id="demo_m2"></p>
+        <p id="demo_m3"></p>
+    </div>
+</div>
+
+<!-- Quick Sort div -->
+    <div>
+        <h1 style="text-align: center;">Click to sort using quick sort</h1>
+        <div style="margin-left: 40px;">
+            <button onclick="quickSort()">Calculate</button>
+            <!--displaying the result for insertion.js file-- -->
+            <p id="demo_u3"></p>
+            <p id="demo_q2"></p>
+            <p id="demo_q3"></p>
+        </div>
+    </div>
+    <canvas id="myChart" width="200px" height="200px"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="canvasGraph.js"></script>
+</div>
+</body>
+<script>
+//randomly generating numbers
+const numbers = Array.from({length: 40}, () => Math.floor(Math.random() * 40));
+document.getElementById("demo_u1").innerHTML = "Unsorted Array is: " + numbers;
+document.getElementById("demo_u2").innerHTML = "Unsorted Array is: " + numbers;
+document.getElementById("demo_u3").innerHTML = "Unsorted Array is: " + numbers;
+quickSort(numbers)
+insertionSort(numbers)
+divide(numbers)
+</script>
+</html>
